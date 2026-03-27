@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 220 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 10%;
+
+    --primary: 162 63% 41%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 25% 93%;
+    --secondary-foreground: 220 25% 20%;
+
+    --muted: 210 20% 95%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 38 92% 60%;
+    --accent-foreground: 220 25% 10%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 18% 89%;
+    --input: 210 18% 89%;
+    --ring: 162 63% 41%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom tokens */
+    --essay-surface: 210 25% 97%;
+    --essay-highlight: 48 96% 89%;
+    --essay-improved: 152 60% 92%;
+    --essay-removed: 0 80% 93%;
+    --gradient-hero: linear-gradient(135deg, hsl(162, 63%, 41%), hsl(162, 80%, 32%));
+    --shadow-card: 0 1px 3px 0 hsl(220 25% 10% / 0.04), 0 4px 16px -2px hsl(220 25% 10% / 0.06);
+    --shadow-elevated: 0 4px 24px -4px hsl(220 25% 10% / 0.1), 0 12px 48px -8px hsl(220 25% 10% / 0.08);
+  }
+
+  .dark {
+    --background: 220 20% 8%;
+    --foreground: 210 20% 95%;
+    --card: 220 18% 12%;
+    --card-foreground: 210 20% 95%;
+    --popover: 220 18% 12%;
+    --popover-foreground: 210 20% 95%;
+    --primary: 162 63% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 210 20% 90%;
+    --muted: 220 15% 16%;
+    --muted-foreground: 210 10% 55%;
+    --accent: 38 92% 60%;
+    --accent-foreground: 220 25% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 162 63% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', serif;
+  }
+}
+
+@layer utilities {
+  .essay-surface {
+    background-color: hsl(var(--essay-surface));
+  }
+  .essay-highlight {
+    background-color: hsl(var(--essay-highlight));
+  }
+  .essay-improved {
+    background-color: hsl(var(--essay-improved));
+  }
+  .essay-removed {
+    background-color: hsl(var(--essay-removed));
+  }
+}
